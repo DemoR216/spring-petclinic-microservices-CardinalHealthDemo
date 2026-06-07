@@ -9266,7 +9266,7 @@ textarea.form-control-lg {
   color: #f1f1f1; }
 
 .table-filter {
-  background-color: #34302D;
+  background-color: #000000;
   padding: 9px 12px; }
 
 .nav > li > a {
@@ -9277,16 +9277,16 @@ textarea.form-control-lg {
   border-width: 2px;
   transition: border 0.15s;
   color: #f1f1f1;
-  background: #34302D;
-  border-color: #6db33f;
+  background: #000000;
+  border-color: #E41F35;
   -webkit-transition: border 0.15s;
   -moz-transition: border 0.15s;
   -o-transition: border 0.15s;
   -ms-transition: border 0.15s; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,
   .btn-primary .open .dropdown-toggle {
-    background-color: #34302D;
-    border-color: #34302D; }
+    background-color: #000000;
+    border-color: #000000; }
 
 .container .text-muted {
   margin: 20px 0; }
@@ -9323,8 +9323,8 @@ h1, .h1 {
   display: none; }
 
 .splash {
-  background: #6db33f;
-  color: #34302D;
+  background: #E41F35;
+  color: #000000;
   display: none; }
 
 .error-page {
@@ -9368,7 +9368,7 @@ table td.action-column {
   color: #f1f1f1; }
 
 .status-help-content-table td {
-  color: #34302D; }
+  color: #000000; }
 
 .logo {
   width: 200px; }
@@ -9385,7 +9385,7 @@ table td.action-column {
   -webkit-animation-timing-function: linear; }
 
 hr {
-  border-top: 1px dotted #34302D; }
+  border-top: 1px dotted #000000; }
 
 /* Chatbox container */
 .chatbox {
@@ -9498,7 +9498,7 @@ body, h1, .h1, h2, .h2, h3, .h3, p, input {
   margin: 0;
   font-weight: 400;
   font-family: "varela_roundregular", sans-serif;
-  color: #34302d; }
+  color: #000000; }
 
 h1, .h1 {
   font-size: 24px;
@@ -9523,8 +9523,8 @@ strong {
   font-family: "montserratregular", sans-serif; }
 
 .navbar {
-  border-top: 4px solid #6db33f;
-  background-color: #34302d;
+  border-top: 4px solid #E41F35;
+  background-color: #000000;
   margin-bottom: 0px;
   border-bottom: 0;
   border-left: 0;
@@ -9573,7 +9573,7 @@ strong {
 
 .navbar li:hover > a {
   color: #eeeeee;
-  background-color: #6db33f; }
+  background-color: #E41F35; }
 
 .navbar-toggle {
   border-width: 0; }

@@ -15,11 +15,11 @@
 
 $icon-font-path:    "../../webjars/bootstrap/fonts/";
 
-$spring-green:      #6db33f;
-$spring-dark-green: #5fa134;
-$spring-brown:      #34302D;
+$spring-green:      #E41F35;      // Cardinal Health red (was #6db33f)
+$spring-dark-green: #C41929;      // Dark Cardinal red (was #5fa134)
+$spring-brown:      #000000;      // Cardinal Health black (was #34302D)
 $spring-grey:       #838789;
-$spring-light-grey: #f1f1f1;
+$spring-light-grey: #F5F5F5;      // Light gray (was #f1f1f1)
 
 $chatbox-bg-color: #f1f1f1;
 $chatbox-header-bg-color: #075E54;
