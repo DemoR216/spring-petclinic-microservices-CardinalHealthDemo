@@ -6,10 +6,13 @@ import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.ai.chat.memory.ChatMemory;
+import org.springframework.ai.model.function.FunctionCallback;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * This REST controller is being invoked by the in order to interact with the LLM
@@ -22,14 +25,10 @@ public class PetclinicChatClient {
 
     private static final Logger LOG = LoggerFactory.getLogger(PetclinicChatClient.class);
 
-	// ChatModel is the primary interfaces for interacting with an LLM
-	// it is a request/response interface that implements the ModelModel
-	// interface. Make suer to visit the source code of the ChatModel and
-	// checkout the interfaces in the core Spring AI package.
 	private final ChatClient chatClient;
 
 	public PetclinicChatClient(ChatClient.Builder builder, ChatMemory chatMemory,
-                               PetclinicTools petclinicTools) {
+                               List<FunctionCallback> functionCallbacks) {
         // @formatter:off
 		this.chatClient = builder
 				.defaultSystem("""
@@ -44,21 +43,18 @@ public class PetclinicChatClient {
                           For owners, pets or visits - provide the correct data.
                           """)
 				.defaultAdvisors(
-						// Chat memory helps us keep context when using the chatbot for up to 10 previous messages.
-                        MessageChatMemoryAdvisor.builder(chatMemory)
+						MessageChatMemoryAdvisor.builder(chatMemory)
                             .order(10)
                             .build(),
 						new SimpleLoggerAdvisor()
 						)
-                .defaultTools(petclinicTools)
+                .defaultFunctions(functionCallbacks.toArray(new FunctionCallback[0]))
 				.build();
   }
 
   @PostMapping("/chatclient")
   public String exchange(@RequestBody String query) {
 	  try {
-		  //All chatbot messages go through this endpoint
-		  //and are passed to the LLM
 		  return this.chatClient
               .prompt()
               .user(query)
