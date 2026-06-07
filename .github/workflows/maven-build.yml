@@ -16,4 +16,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn clean package -ntp -pl '!spring-petclinic-genai-service'
+      run: mvn clean package -ntp
