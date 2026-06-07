@@ -13,8 +13,8 @@ import org.springframework.samples.petclinic.genai.dto.Vet;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.NotBlank;
 
 /**
  * This class defines the tool functions that the LLM provider will invoke when it
