@@ -111,7 +111,7 @@
         </dependency>
         <dependency>
             <groupId>org.webjars.npm</groupId>
-            <artifactId>_at_fortawesome__fontawesome-free</artifactId>
+            <artifactId>fortawesome__fontawesome-free</artifactId>
             <version>${webjars-font-awesome.version}</version>
         </dependency>
         <dependency>
