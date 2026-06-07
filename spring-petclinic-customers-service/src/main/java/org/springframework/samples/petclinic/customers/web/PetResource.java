@@ -16,7 +16,7 @@
 package org.springframework.samples.petclinic.customers.web;
 
 import io.micrometer.core.annotation.Timed;
-import javax.validation.constraints.Min;
+import jakarta.validation.constraints.Min;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

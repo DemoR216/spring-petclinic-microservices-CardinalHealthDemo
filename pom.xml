@@ -6,12 +6,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.18</version>
+        <version>3.4.1</version>
     </parent>
 
     <groupId>org.springframework.samples</groupId>
     <artifactId>spring-petclinic-microservices</artifactId>
-    <version>2.7.18</version>
+    <version>3.4.1</version>
     <name>${project.artifactId}</name>
     <packaging>pom</packaging>
 
@@ -26,11 +26,11 @@
     </modules>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>21</java.version>
 
-        <spring-cloud.version>2021.0.9</spring-cloud.version>
-        <chaos-monkey-spring-boot.version>2.7.0</chaos-monkey-spring-boot.version>
-        <jolokia-core.version>1.7.1</jolokia-core.version>
+        <spring-cloud.version>2024.0.0</spring-cloud.version>
+        <chaos-monkey-spring-boot.version>3.1.1</chaos-monkey-spring-boot.version>
+        <jolokia-core.version>2.1.1</jolokia-core.version>
 
         <docker.image.prefix>springcommunity</docker.image.prefix>
         <docker.image.exposed.port>9090</docker.image.exposed.port>
@@ -61,8 +61,9 @@
             </dependency>
             <dependency>
                 <groupId>org.jolokia</groupId>
-                <artifactId>jolokia-core</artifactId>
+                <artifactId>jolokia-agent-jvm</artifactId>
                 <version>${jolokia-core.version}</version>
+                <classifier>javaagent</classifier>
             </dependency>
 
         </dependencies>
@@ -101,8 +102,8 @@
 
                     <!-- Spring Boot Actuator displays build-related information if a META-INF/build-info.properties file is present -->
                     <plugin>
-                        <groupId>pl.project13.maven</groupId>
-                        <artifactId>git-commit-id-plugin</artifactId>
+                        <groupId>io.github.git-commit-id</groupId>
+                        <artifactId>git-commit-id-maven-plugin</artifactId>
                         <executions>
                             <execution>
                                 <goals>
@@ -136,7 +137,7 @@
 
                                                 Your current Java version is ${java.version}
                                                 To fix this:
-                                                1. Download and install Java 11 or higher from your preferred vendor
+                                                1. Download and install Java 21 or higher from your preferred vendor
                                                 2. Make sure JAVA_HOME points to the new Java installation
                                                 3. Verify with 'java -version' command
                                                 4. Run the build again
