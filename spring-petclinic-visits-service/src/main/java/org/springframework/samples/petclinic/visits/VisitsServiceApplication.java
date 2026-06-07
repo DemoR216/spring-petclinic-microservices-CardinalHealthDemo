@@ -15,6 +15,8 @@
  */
 package org.springframework.samples.petclinic.visits;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -24,6 +26,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
+@OpenAPIDefinition(info = @Info(title = "Visits Service API", version = "1.0", description = "API for managing pet visits"))
 public class VisitsServiceApplication {
 
     public static void main(String[] args) {
