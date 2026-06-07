@@ -77,7 +77,8 @@
         </dependency>
         <dependency>
             <groupId>org.jolokia</groupId>
-            <artifactId>jolokia-core</artifactId>
+            <artifactId>jolokia-agent-jvm</artifactId>
+            <classifier>javaagent</classifier>
         </dependency>
         <dependency>
             <groupId>io.micrometer</groupId>
