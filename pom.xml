@@ -30,7 +30,7 @@
 
         <spring-cloud.version>2021.0.9</spring-cloud.version>
         <chaos-monkey-spring-boot.version>2.7.0</chaos-monkey-spring-boot.version>
-        <jolokia-core.version>1.7.1</jolokia-core.version>
+        <jolokia.version>2.1.1</jolokia.version>
 
         <docker.image.prefix>springcommunity</docker.image.prefix>
         <docker.image.exposed.port>9090</docker.image.exposed.port>
@@ -61,8 +61,8 @@
             </dependency>
             <dependency>
                 <groupId>org.jolokia</groupId>
-                <artifactId>jolokia-core</artifactId>
-                <version>${jolokia-core.version}</version>
+                <artifactId>jolokia-agent-jvm</artifactId>
+                <version>${jolokia.version}</version>
             </dependency>
 
         </dependencies>

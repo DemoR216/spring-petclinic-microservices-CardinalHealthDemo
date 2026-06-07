@@ -69,7 +69,7 @@
         </dependency>
         <dependency>
             <groupId>org.jolokia</groupId>
-            <artifactId>jolokia-core</artifactId>
+            <artifactId>jolokia-agent-jvm</artifactId>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
