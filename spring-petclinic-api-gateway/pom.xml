@@ -82,7 +82,7 @@
         <!-- Third parties -->
         <dependency>
             <groupId>org.jolokia</groupId>
-            <artifactId>jolokia-core</artifactId>
+            <artifactId>jolokia-support-spring</artifactId>
         </dependency>
         <dependency>
             <groupId>io.micrometer</groupId>
