@@ -133,6 +133,10 @@
             <artifactId>marked</artifactId>
             <version>${webjars-marked.version}</version>
         </dependency>
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+        </dependency>
 
         <!-- Testing -->
         <dependency>
