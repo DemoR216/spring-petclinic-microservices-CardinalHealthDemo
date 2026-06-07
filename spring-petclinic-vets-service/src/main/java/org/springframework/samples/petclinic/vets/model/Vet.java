@@ -15,9 +15,9 @@
  */
 package org.springframework.samples.petclinic.vets.model;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.xml.bind.annotation.XmlElement;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.xml.bind.annotation.XmlElement;
 import org.springframework.beans.support.MutableSortDefinition;
 import org.springframework.beans.support.PropertyComparator;
 
