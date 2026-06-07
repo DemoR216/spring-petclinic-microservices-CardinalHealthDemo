@@ -15,6 +15,8 @@
  */
 package org.springframework.samples.petclinic.vets;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -27,6 +29,7 @@ import org.springframework.samples.petclinic.vets.system.VetsProperties;
 @EnableDiscoveryClient
 @SpringBootApplication
 @EnableConfigurationProperties(VetsProperties.class)
+@OpenAPIDefinition(info = @Info(title = "Vets Service API", version = "1.0", description = "API for managing veterinarians and specialties"))
 public class VetsServiceApplication {
 
 	public static void main(String[] args) {
