@@ -15,7 +15,7 @@
  */
 package org.springframework.samples.petclinic.customers.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 /**
  * @author Juergen Hoeller

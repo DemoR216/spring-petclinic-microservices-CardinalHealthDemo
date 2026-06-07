@@ -1,7 +1,7 @@
 package org.springframework.samples.petclinic.customers.web;
 
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.NotBlank;
 
 public class OwnerRequest {
 
