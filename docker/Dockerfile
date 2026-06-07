@@ -1,10 +1,10 @@
-FROM eclipse-temurin:21 AS builder
+FROM eclipse-temurin:11 AS builder
 WORKDIR application
 ARG ARTIFACT_NAME
 COPY ${ARTIFACT_NAME}.jar application.jar
 RUN java -Djarmode=layertools -jar application.jar extract
 
-FROM eclipse-temurin:21
+FROM eclipse-temurin:11
 WORKDIR application
 
 ARG EXPOSED_PORT
@@ -28,4 +28,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
   CMD curl -f http://localhost:${EXPOSED_PORT}/actuator/health || exit 1
 
 USER spring
-ENTRYPOINT ["java", "org.springframework.boot.loader.launch.JarLauncher"]
+ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]
