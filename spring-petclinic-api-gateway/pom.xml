@@ -16,7 +16,7 @@
 
     <properties>
         <webjars-bootstrap.version>5.3.3</webjars-bootstrap.version>
-        <webjars-font-awesome.version>4.7.0</webjars-font-awesome.version>
+        <webjars-font-awesome.version>6.7.2</webjars-font-awesome.version>
         <webjars-angular.version>1.8.3</webjars-angular.version>
         <webjars-angular-ui-router.version>1.0.30</webjars-angular-ui-router.version>
         <webjars-marked.version>14.1.2</webjars-marked.version>
@@ -111,7 +111,7 @@
         </dependency>
         <dependency>
             <groupId>org.webjars.npm</groupId>
-            <artifactId>font-awesome</artifactId>
+            <artifactId>fortawesome__fontawesome-free</artifactId>
             <version>${webjars-font-awesome.version}</version>
         </dependency>
         <dependency>
