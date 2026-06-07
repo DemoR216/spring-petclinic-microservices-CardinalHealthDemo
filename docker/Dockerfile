@@ -1,11 +1,11 @@
-FROM eclipse-temurin:11 AS builder
+FROM eclipse-temurin:21 AS builder
 WORKDIR application
 ARG ARTIFACT_NAME
 COPY ${ARTIFACT_NAME}.jar application.jar
 RUN java -Djarmode=layertools -jar application.jar extract
 
 
-FROM eclipse-temurin:11
+FROM eclipse-temurin:21
 WORKDIR application
 
 ARG EXPOSED_PORT
@@ -25,4 +25,4 @@ RUN true
 COPY --from=builder application/snapshot-dependencies/ ./
 RUN true
 COPY --from=builder application/application/ ./
-ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]
+ENTRYPOINT ["java", "org.springframework.boot.loader.launch.JarLauncher"]

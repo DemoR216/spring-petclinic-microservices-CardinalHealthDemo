@@ -16,7 +16,6 @@
 package org.springframework.samples.petclinic.vets.system;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.ConstructorBinding;
 
 /**
  * Typesafe custom configuration.
@@ -24,7 +23,6 @@ import org.springframework.boot.context.properties.ConstructorBinding;
  * @author Maciej Szarlinski
  */
 @ConfigurationProperties(prefix = "vets")
-@ConstructorBinding
 public class VetsProperties {
 
     private final Cache cache;
