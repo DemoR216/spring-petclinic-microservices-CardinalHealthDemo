@@ -41,7 +41,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #0d6efd;
+  --bs-primary: #E41F35;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -49,7 +49,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 13, 110, 253;
+  --bs-primary-rgb: 228, 31, 53;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -105,11 +105,11 @@
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
   --bs-heading-color: inherit;
-  --bs-link-color: #0d6efd;
-  --bs-link-color-rgb: 13, 110, 253;
+  --bs-link-color: #E41F35;
+  --bs-link-color-rgb: 228, 31, 53;
   --bs-link-decoration: underline;
-  --bs-link-hover-color: #0a58ca;
-  --bs-link-hover-color-rgb: 10, 88, 202;
+  --bs-link-hover-color: #C41230;
+  --bs-link-hover-color-rgb: 196, 18, 48;
   --bs-code-color: #d63384;
   --bs-highlight-color: #212529;
   --bs-highlight-bg: #fff3cd;
@@ -9276,17 +9276,17 @@ textarea.form-control-lg {
   margin-top: 12px;
   border-width: 2px;
   transition: border 0.15s;
-  color: #f1f1f1;
-  background: #34302D;
-  border-color: #6db33f;
+  color: #FFFFFF;
+  background: #E41F35;
+  border-color: #E41F35;
   -webkit-transition: border 0.15s;
   -moz-transition: border 0.15s;
   -o-transition: border 0.15s;
   -ms-transition: border 0.15s; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,
   .btn-primary .open .dropdown-toggle {
-    background-color: #34302D;
-    border-color: #34302D; }
+    background-color: #C41230;
+    border-color: #C41230; }
 
 .container .text-muted {
   margin: 20px 0; }
@@ -9323,8 +9323,8 @@ h1, .h1 {
   display: none; }
 
 .splash {
-  background: #6db33f;
-  color: #34302D;
+  background: #E41F35;
+  color: #FFFFFF;
   display: none; }
 
 .error-page {
@@ -9523,8 +9523,8 @@ strong {
   font-family: "montserratregular", sans-serif; }
 
 .navbar {
-  border-top: 4px solid #6db33f;
-  background-color: #34302d;
+  border-top: 4px solid #E41F35;
+  background-color: #FFFFFF;
   margin-bottom: 0px;
   border-bottom: 0;
   border-left: 0;
@@ -9556,6 +9556,7 @@ strong {
   font-family: "montserratregular", sans-serif;
   text-shadow: none;
   font-size: 14px;
+  color: #333333;
   /* line-height: 14px; */
   padding: 28px 20px;
   transition: all 0.15s;
@@ -9572,8 +9573,8 @@ strong {
   margin-bottom: 0; }
 
 .navbar li:hover > a {
-  color: #eeeeee;
-  background-color: #6db33f; }
+  color: #FFFFFF;
+  background-color: #E41F35; }
 
 .navbar-toggle {
   border-width: 0; }
