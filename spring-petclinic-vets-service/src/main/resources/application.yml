@@ -7,6 +7,12 @@ spring:
     cache-names: vets
   profiles:
     active: production
+  jpa:
+    defer-datasource-initialization: true
+  sql:
+    init:
+      schema-locations: classpath*:db/hsqldb/schema.sql
+      data-locations: classpath*:db/hsqldb/data.sql
 
 ---
 spring:
