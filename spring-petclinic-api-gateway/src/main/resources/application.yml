@@ -15,6 +15,11 @@ spring:
             retries: 1
             statuses: SERVICE_UNAVAILABLE
             methods: POST
+        - name: RequestRateLimiter
+          args:
+            redis-rate-limiter.replenishRate: 10
+            redis-rate-limiter.burstCapacity: 20
+            key-resolver: "#{@remoteAddrKeyResolver}"
       routes:
         - id: vets-service
           uri: lb://vets-service
