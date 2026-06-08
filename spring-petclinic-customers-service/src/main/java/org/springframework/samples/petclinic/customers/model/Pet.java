@@ -16,7 +16,7 @@
 package org.springframework.samples.petclinic.customers.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import org.springframework.core.style.ToStringCreator;
 
 import java.util.Date;

@@ -6,12 +6,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.18</version>
+        <version>3.4.1</version>
     </parent>
 
     <groupId>org.springframework.samples</groupId>
     <artifactId>spring-petclinic-microservices</artifactId>
-    <version>2.7.18</version>
+    <version>3.4.1</version>
     <name>${project.artifactId}</name>
     <packaging>pom</packaging>
 
@@ -26,11 +26,11 @@
     </modules>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>21</java.version>
 
-        <spring-cloud.version>2021.0.9</spring-cloud.version>
-        <chaos-monkey-spring-boot.version>2.7.0</chaos-monkey-spring-boot.version>
-        <jolokia-core.version>1.7.1</jolokia-core.version>
+        <spring-cloud.version>2024.0.0</spring-cloud.version>
+        <chaos-monkey-spring-boot.version>3.1.0</chaos-monkey-spring-boot.version>
+        <jolokia.version>2.1.1</jolokia.version>
 
         <docker.image.prefix>springcommunity</docker.image.prefix>
         <docker.image.exposed.port>9090</docker.image.exposed.port>
@@ -61,8 +61,9 @@
             </dependency>
             <dependency>
                 <groupId>org.jolokia</groupId>
-                <artifactId>jolokia-core</artifactId>
-                <version>${jolokia-core.version}</version>
+                <artifactId>jolokia-agent-jvm</artifactId>
+                <version>${jolokia.version}</version>
+                <classifier>javaagent</classifier>
             </dependency>
 
         </dependencies>

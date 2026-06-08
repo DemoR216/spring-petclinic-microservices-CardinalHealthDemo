@@ -15,9 +15,8 @@
  */
 package org.springframework.samples.petclinic.vets.model;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.xml.bind.annotation.XmlElement;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import org.springframework.beans.support.MutableSortDefinition;
 import org.springframework.beans.support.PropertyComparator;
 
@@ -61,7 +60,6 @@ public class Vet {
         return this.specialties;
     }
 
-    @XmlElement
     public List<Specialty> getSpecialties() {
         List<Specialty> sortedSpecs = new ArrayList<>(getSpecialtiesInternal());
         PropertyComparator.sort(sortedSpecs, new MutableSortDefinition("name", true, true));
